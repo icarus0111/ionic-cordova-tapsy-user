@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="M-408 -491L232 -491L232 645L-408 645Z" />
+		</clipPath>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #8c3bfa } 
+	</style>
+	<g id="Payment" clip-path="url(#cp1)">
+		<g id="Group 122">
+			<path id="star-empty" fill-rule="evenodd" class="shp0" d="M32 12.62L24 20.42L25.89 31.43L16 26.23L6.11 31.43L8 20.42L0 12.62L11.06 11.02L16 1L20.94 11.02L32 12.62ZM16 23.76L22.98 27.43L21.65 19.66L27.3 14.15L19.49 13.02L16 5.94L12.51 13.02L4.7 14.15L10.35 19.66L9.02 27.43L16 23.76L16 23.76Z" />
+		</g>
+	</g>
+</svg>

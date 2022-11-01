@@ -1,0 +1,36 @@
+<app-loader class="loader1" *ngIf="showLoader"></app-loader>
+
+<ion-content fullscreen>
+    <div class="subcategory-col">
+        <div class="sub-category-top">
+            <a class="previous-icon" (click)="goBack()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13.41" height="21.717" viewBox="0 0 13.41 21.717">
+                    <path id="ic_navigate_before_24px" d="M21.41,8.552,18.858,6,8,16.858,18.858,27.717l2.552-2.552-8.289-8.307Z" transform="translate(-8.59 -5.75)" fill="#222"/>
+                </svg>
+                <h2>Schedule</h2>
+            </a>
+        </div>
+
+    <div class="w-100 calender-box">
+            <div class="Schedule-col">
+                    <h3>Select date and time</h3>
+                    <!-- <div class="calender-col"></div> -->
+                </div>
+        <ngb-datepicker class="w-100 calender" #dp [(ngModel)]="model" (navigate)="date = $event.next" [displayMonths]="displayMonths" [navigation]="arrows" (ngModelChange)="selectDate(model)"></ngb-datepicker>
+    </div>
+
+    <ion-segment scrollable style="width:100%; height: 30vh;">
+        <div class="timetable">
+            <h6>SLOTS AVAILABLE</h6>
+
+            <ul class="time-list">
+                <li *ngFor="let st of scheduleTime" [ngClass]="st.active ? 'active' : ''" (click)="onClickScheduleTime(st)"><a>{{st?.time}}</a></li>
+                <!-- <li class="active"><a>09:00</a></li> -->
+            </ul>
+
+            <a class="conform-btn" (click)="onClickConfSchedule()">Confirm schedule <i class="fa fa-angle-right"></i></a>
+        </div>
+    </ion-segment>
+</div>
+    <!-- bottom tab -->
+</ion-content>

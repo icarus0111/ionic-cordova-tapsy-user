@@ -1,0 +1,87 @@
+<app-loader class="loader1" *ngIf="showLoader"></app-loader>
+
+<ion-content fullscreen>
+    <div class="subcategory-col">
+        <div class="sub-category-top">
+            <a class="previous-icon" (click)="goBack()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13.41" height="21.717" viewBox="0 0 13.41 21.717">
+                    <path id="ic_navigate_before_24px" d="M21.41,8.552,18.858,6,8,16.858,18.858,27.717l2.552-2.552-8.289-8.307Z" transform="translate(-8.59 -5.75)" fill="#222"/>
+                </svg>
+                <h2>My Booking</h2>
+            </a>
+        </div>
+
+
+        <ion-segment scrollable>
+            <ul class="top-tab-list">
+                <li [ngClass]="activeTab[0] == 'true' ? 'active' : ''" (click)="onClickTab(0)">
+                    <a>Upcoming</a>
+                </li>
+                <li [ngClass]="activeTab[1] == 'true' ? 'active' : ''" (click)="onClickTab(1)">
+                    <a>Completed</a>
+                </li>
+            </ul>
+        </ion-segment>
+
+        <div class="tab-content" *ngIf="activeTab[0] == 'true'">
+            <ul *ngIf="upcomingJobs.length > 0" class="booking-list">
+                <li *ngFor="let job of upcomingJobs" (click)="moveDetails(job.id)">
+                    <div class="date">{{job?.formatedDate}}</div>
+                    <div *ngIf="job?.address != null" class="booking-list-left">
+                        <img src="../../../assets/images/map-location-icon.svg" alt="">
+                        <p>{{job?.address}}</p>
+                        <i class="fa fa-angle-right"></i>
+                        <h5>{{job?.service_details?.name | titlecase}}</h5>
+                    </div>
+                    <i *ngIf="job?.address == null" class="fa right-arrow fa-angle-right"></i>
+                    <h5 *ngIf="job?.address == null">{{job?.service_details?.name | titlecase}}</h5>
+                </li>
+                <!-- <li class="tab-content-false"></li> -->
+                <ion-infinite-scroll *ngIf="load_upcoming" threshold="100px" (ionInfinite)="loadUpcomingData($event)">
+                    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+                    </ion-infinite-scroll-content>
+                </ion-infinite-scroll>
+            </ul>
+            <div class="no-data-col" *ngIf="upcomingJobs.length == 0">
+                <div class="vertical-align-wrap2">
+                    <div class="vertical-align vertical-align--middle">
+                        <p>Sorry! You don't have any upcoming rides</p>
+                        <a routerLink='/home' class="book-now-btn">Book a Job Now <i class="fa fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" *ngIf="activeTab[1] == 'true'">
+            <ul *ngIf="completedJobs.length > 0" class="booking-list">
+                <li *ngFor="let job of completedJobs" (click)="moveDetails(job.id)">
+                    <div class="date">{{job?.formatedDate}}</div>
+                    <div *ngIf="job?.address != null" class="booking-list-left">
+                        <img src="../../../assets/images/map-location-icon.svg" alt="">
+                        <p>{{job?.address}}</p>
+                        <i class="fa fa-angle-right"></i>
+                        <h5>{{job?.service_details?.name | titlecase}}</h5>
+                    </div>
+                    <i *ngIf="job?.address == null" class="fa fa-angle-right"></i>
+                    <h5 *ngIf="job?.address == null">{{job?.service_details?.name | titlecase}}</h5>
+                </li>
+                <!-- <li class="tab-content-false"></li> -->
+
+                <ion-infinite-scroll *ngIf="load_complete" threshold="100px" (ionInfinite)="loadCompleteData($event)">
+                    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+                    </ion-infinite-scroll-content>
+                </ion-infinite-scroll>
+            </ul>
+            <div class="no-data-col" *ngIf="completedJobs.length == 0">
+                <div class="vertical-align-wrap2">
+                    <div class="vertical-align vertical-align--middle">
+                        <p>Sorry! You don't have any completed rides</p>
+                        <a routerLink='/home' class="book-now-btn">Book a Job Now <i class="fa fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- bottom tab -->
+        <app-bottom-tab></app-bottom-tab>
+    </div>
+</ion-content>

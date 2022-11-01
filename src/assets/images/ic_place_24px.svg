@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 20" width="13" height="20">
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="M-60 -309L580 -309L580 827L-60 827Z" />
+		</clipPath>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #321733 } 
+	</style>
+	<g id="my booking" clip-path="url(#cp1)">
+		<path id="ic_place_24px" fill-rule="evenodd" class="shp0" d="M12.97 7.22C12.97 12.08 6.5 19.25 6.5 19.25C6.5 19.25 0.02 12.08 0.02 7.22C0.02 3.65 2.92 0.75 6.5 0.75C10.08 0.75 12.97 3.65 12.97 7.22ZM8.81 7.22C8.81 5.95 7.78 4.91 6.5 4.91C5.22 4.91 4.19 5.95 4.19 7.22C4.19 8.5 5.22 9.54 6.5 9.54C7.78 9.54 8.81 8.5 8.81 7.22Z" />
+	</g>
+</svg>

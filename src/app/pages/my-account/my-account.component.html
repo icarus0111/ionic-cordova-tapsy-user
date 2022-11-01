@@ -1,0 +1,91 @@
+<app-loader class="loader1" *ngIf="showLoader"></app-loader>
+
+
+<ion-content fullscreen>
+    <div class="subcategory-col">
+        <div class="sub-category-top">
+            <a class="previous-icon" (click)="goBack()"><svg xmlns="http://www.w3.org/2000/svg" width="13.41" height="21.717" viewBox="0 0 13.41 21.717">
+      <path id="ic_navigate_before_24px" d="M21.41,8.552,18.858,6,8,16.858,18.858,27.717l2.552-2.552-8.289-8.307Z" transform="translate(-8.59 -5.75)" fill="#222"/>
+    </svg> <h2>My Account</h2></a> <button *ngIf="!isedit" type="button" (click)="edit_account()" class="edit-btn"> Edit Profile</button>
+        </div>
+
+
+        <div class="my-account-col">
+            <form [formGroup]="accountForm" (ngSubmit)="onSubmitMyAccountForm()">
+                <div class="account-info">
+                    <ul class="account-list">
+                        <li>First Name: <span>{{name[0] | titlecase}}</span></li>
+                        <li>Last Name: <span>{{name[1] | titlecase}}</span></li>
+                        <li>Phone No: <span>+61 {{account_details?.phone}}</span></li>
+                        <li>Email: <span>{{account_details?.email}}</span></li>
+                        <!-- <li>Rego No: <span>{{account_details?.email}}</span></li> -->
+                        <li>Address:
+                            <span *ngIf="!isedit">{{account_details?.address}}</span>
+                            <span *ngIf="isedit">
+                            <textarea formControlName='address' name="address" class="input" placeholder="Address" rows="2"></textarea>
+                            </span>
+                        </li>
+                        <li>State:
+                            <span *ngIf="!isedit">{{account_details?.state_details?.short_name}}</span>
+                            <span *ngIf="isedit">
+                            <div class="select">
+                        <ion-select formControlName='state' name="state"  placeholder="State" (ionChange)="checkValue($event)">
+                            <ion-select-option [value]="state?.id" *ngFor="let state of state_all">{{state?.name}}</ion-select-option>
+                        </ion-select>
+                        </div>
+                    </span>
+                        </li>
+                        <li>Post Code:
+                            <span *ngIf="!isedit">{{account_details?.post_code}}</span>
+                            <span *ngIf="isedit">
+                        <input formControlName='post_code'  type="tel" name="post_code" placeholder="Post Code" class="input">
+                    </span>
+                        </li>
+                        <li>Suburb:
+                            <span *ngIf="!isedit">{{account_details?.suburb}}</span>
+                            <span *ngIf="isedit">
+                        <textarea formControlName='suburb' name="suburb" class="input" placeholder="Suburb" rows="2"></textarea>
+                    </span>
+                        </li>
+                    </ul>
+                    <div class="btn-col">
+                        <button *ngIf="isedit" type="submit" class="processed-btn"> Update <i class="fa fa-angle-right"></i></button>
+                        <button *ngIf="isedit" type="button" (click)="cancel_edit()" class="cancel-btn"> Cancel <i class="fa fa-angle-right"></i></button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <!-- <ion-segment scrollable>
+        <ul class="top-tab-list">
+            <li class="active"><a>Upcoming</a></li>
+            <li><a>Completed</a></li>
+        </ul>
+    </ion-segment> -->
+
+
+        <!-- <div class="tab-content">
+        <ul class="booking-list">
+            <li>
+                <div class="date">27 Nov 2019</div>
+                <div class="booking-list-left">
+                    <img src="../../../assets/images/map-location-icon.svg" alt="">
+                    <p>360 Orange Grove Road, Salisbury</p>
+                    <i class="fa fa-angle-right"></i>
+                    <h5>Replacement Car Keys</h5>
+                </div>
+            </li>
+            <li>
+                <div class="date">27 Nov 2019</div>
+                <div class="booking-list-left">
+                    <img src="../../../assets/images/map-location-icon.svg" alt="">
+                    <p>360 Orange Grove Road, Salisbury</p>
+                    <h5>Replacement Car Keys</h5>
+                </div>
+            </li>
+        </ul>
+    </div> -->
+        <!-- bottom tab -->
+        <app-bottom-tab></app-bottom-tab>
+    </div>
+</ion-content>

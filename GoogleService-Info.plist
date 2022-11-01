@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>768776086017-dk2ds5v9r3q2d1a5tecbdkvfmjekaaoe.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.768776086017-dk2ds5v9r3q2d1a5tecbdkvfmjekaaoe</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>768776086017-ftn3n2lptd2auqqe0o065mvt962qt19r.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDgp4bo3CgxZ9UKN5Nhu0w9Wy4_crzTF-w</string>
+	<key>GCM_SENDER_ID</key>
+	<string>768776086017</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.tapsyservice.tapsy</string>
+	<key>PROJECT_ID</key>
+	<string>tapsy-156800</string>
+	<key>STORAGE_BUCKET</key>
+	<string>tapsy-156800.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:768776086017:ios:b60147afea2bce6d919600</string>
+	<key>DATABASE_URL</key>
+	<string>https://tapsy-156800.firebaseio.com</string>
+</dict>
+</plist>

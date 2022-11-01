@@ -1,0 +1,66 @@
+<app-loader class="loader1" *ngIf="showLoader"></app-loader>
+
+
+<ion-content fullscreen>
+    <div class="join-col">
+        <div class="subcategory-col">
+            <div class="sub-category-top">
+                <a class="previous-icon" (click)="goBack()"><svg xmlns="http://www.w3.org/2000/svg" width="13.41" height="21.717" viewBox="0 0 13.41 21.717">
+  <path id="ic_navigate_before_24px" d="M21.41,8.552,18.858,6,8,16.858,18.858,27.717l2.552-2.552-8.289-8.307Z" transform="translate(-8.59 -5.75)" fill="#222"/>
+</svg> 
+<h2>Payment Method</h2>
+</a>
+
+            </div>
+            <div class="booking-content">
+                <h3>Credit/Debit Card</h3>
+                <span class="visa-card"><img src="../../../assets/images/visa.svg" alt="visa"></span>
+            </div>
+            <div class="payment-form">
+                <form [formGroup]="paymentForm">
+                    <div class="form-group">
+                        <label>Enter Your Card Details</label>
+                        <input type="text" class="form-control" formControlName='name' (keyup)="onNameType($event)" placeholder="Name on Card">
+                        <input type="text" class="form-control" formControlName='card_number' (keyup)="onCardNumberType($event)" placeholder="Card Number">
+                    </div>
+                    <div class="expaire-date">
+                        <label>Expiry Date</label>
+                        <div class="month">
+                            <div class="select">
+                                <!-- <ion-label class="select-title">Month</ion-label> -->
+                                <ion-select name="month" formControlName='month' placeholder="Month">
+                                    <ion-select-option [value]="month.value" *ngFor="let month of monthlist">{{month?.name}}</ion-select-option>
+                                </ion-select>
+                            </div>
+                        </div>
+                        <div class="year">
+                            <div class="select">
+                                <!-- <ion-label class="select-title"></ion-label> -->
+                                <ion-select name="year" formControlName='year' placeholder="Year">
+                                    <ion-select-option [value]="year.value" *ngFor="let year of yearlist">{{year?.name}}</ion-select-option>
+                                </ion-select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cvv-number">
+                        <label>CVV</label>
+                        <input type="text" class="form-control cvv-text" placeholder="CVV" formControlName='cvv' (keyup)="onCvvType($event)">
+                    </div>
+
+                    <div class="bottom-col">
+                        <p>Save my card details for future transactions</p>
+                        <span><ion-toggle slot="start" name="kiwi" color="success" checked></ion-toggle></span>
+                    </div>
+
+                    <div class="secure-col"><img src="../../../assets/images/lock-icon.png" alt="">Secured Payment</div>
+
+
+                </form>
+            </div>
+            <div class="payment-btn-col">
+                <button class="btn1" type="submit" (click)="createJobAndMakePayment()">Find a professional near me<i class="fa fa-angle-right"></i></button>
+            </div>
+        </div>
+    </div>
+</ion-content>

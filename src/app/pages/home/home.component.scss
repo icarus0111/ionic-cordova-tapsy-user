@@ -1,0 +1,30 @@
+.carousel-indicators{ top: 0px; right:0px; margin: 0px; left: initial; width: 120px; background: #fff; padding-right: 25px;}
+.carousel-indicators li{ width: 10px; height: 10px; border-radius: 50%; background-color: #ecdffc;}
+.carousel-indicators .active{ background-color: #8c3bfa;}
+.carousel-indicators{justify-content: flex-end; top: 30px; height: 30px;}
+.top-logo{ height:25px; margin-left: 25px; margin-top:30px;}
+.slider-content{ width: 100%; padding: 30px 25px 25px; height: 28vh;}
+.slider-content h1{ font-size: 24px; font-family: 'Montserrat', sans-serif; font-weight: 700; color: #000;}
+.slider-content p{ color: #858585; font-size: 14px; line-height: 20px; font-family: 'Montserrat', sans-serif; padding-right:5%;}
+.character-img{ width: 100%; padding:0 25px; text-align: center;}
+.character-img img{ width: 100%;}
+.get-start{ width: 100%; position: absolute; bottom:30px; left: 0px; right: 0px;}
+.get-start .get-start-btn{ width: 86%; height: 45px; background: #8c3bfa; cursor: pointer; color: #fff; border-radius: 50px; line-height: 45px; text-align: center; font-size: 13px; margin: 0px auto; display: block; -webkit-box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.23);
+    -moz-box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.23);
+    box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.23);  -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;}
+.carousel-item{ width: 100%; position: relative; height: 100vh;}
+.get-start .get-start-btn:hover{ background-color: #6215c5; text-decoration: none;}
+.get-start .get-start-btn:focus{ background-color: #6215c5;}
+.get-start .get-start-btn:visited{ background-color: #6215c5;}
+.get-start .get-start-btn .fa{ margin-left: 10px;}
+.slider-col{ widows: 100%; height: 100vh;}
+@supports (-webkit-overflow-scrolling: touch) {
+    /* CSS specific to iOS devices */ 
+    .slider-content h1{ font-size: 28px}
+    .slider-content p{ font-size: 18px;}
+    .get-start .get-start-btn{ height: 50px; line-height: 50px;}
+  }
+  

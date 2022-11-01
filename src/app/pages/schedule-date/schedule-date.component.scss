@@ -1,0 +1,168 @@
+.previous-icon svg {
+    float: left;
+    margin-right: 20px;
+    width: 10px;
+    margin-top: -1px;
+}
+
+.sub-category-top {
+    padding: 35px 25px 0;
+}
+
+.sub-category-top {
+    background: #fff;
+    height: 12vh;
+}
+
+.previous-icon h2 {
+    color: #222;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+#expand-search {
+    position: absolute;
+    right: 25px;
+    top: 38px;
+}
+
+.sub-category-content {
+    float: left;
+}
+
+.sub-category-content h3 {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #222222;
+    margin: 10px 0 5px;
+}
+
+.sub-category-content p {
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #b3b4b5;
+}
+
+.round-image {
+    border-radius: 50%;
+}
+
+.Schedule-col {
+    width: 100%;
+    padding:10px 10px;
+}
+
+.Schedule-col h3 {
+    font-size: 24px;
+    color: #222;
+    font-weight: 700;
+}
+
+.calender-col {
+    width: 100%;
+}
+
+ul.time-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+
+ul.time-list li {
+    font-size: 12px;
+    color: #000;
+    font-weight: 700;
+    display: inline-block;
+    margin-right:0px;
+    height: 25px;
+    line-height: 25px;
+    flex: 0 0 50px;
+}
+
+ul.time-list li.active a {
+    background: #9b53fc;
+    border-radius: 50px;
+    display: block;
+    width:50px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    color: #fff !important;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a461fd+0,9041fa+100 */
+    background: #a461fd;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #a461fd 0%, #9041fa 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #a461fd 0%, #9041fa 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #a461fd 0%, #9041fa 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#a461fd', endColorstr='#9041fa', GradientType=0);
+    /* IE6-9 */
+    font-size: 12px;
+}
+.ngb-dp-week-number, .ngb-dp-weekday{ font-style: normal !important;}
+
+ul.time-list li a:hover {
+    color: #9b53fc;
+}
+
+.timetable {
+    width: 100%;
+    float: left;
+    padding: 8px 25px 50px;
+}
+
+.timetable h6 {
+    font-size: 14px;
+    color: #a5acb9;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.conform-btn {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    font-size: 14px;
+    color: #fff !important;
+    text-align: center;
+    margin: 40px auto 0;
+    display: block;
+    border-radius: 50px;
+    background: #8c3bfa;
+    -webkit-box-shadow: 0px 20px 27px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 20px 27px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 20px 27px 0px rgba(0, 0, 0, 0.25);
+}
+
+.conform-btn .fa {
+    margin-left: 10px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.ngb-dp-day,
+.ngb-dp-week-number,
+.ngb-dp-weekday {
+    width: 3rem !important;
+    height: 3rem !important;
+}
+
+.ngb-dp-month {
+    width: 100% !important;
+}
+.calender-box{ padding: 0 13px; height: 58vh;}
+
+@supports (-webkit-overflow-scrolling: touch) {
+    .conform-btn { height: 50px; line-height: 50px;} 
+}

@@ -1,0 +1,74 @@
+<app-loader class="loader1" *ngIf="showLoader"></app-loader>
+
+<ion-content fullscreen>
+    <div class="category-top-col">
+        <div class="category-serach">
+            <!-- <span class="search-btn" *ngIf="searchbtn"><a (click)=searchopen();><img src="../../assets/images/serach-icon.png"></a></span>
+            <span class="search-close" *ngIf="searchclose"><a (click)=closebtn();><img src="../../assets/images/close.png" alt=""></a></span> -->
+            <a (click)="goBack()" class="previous-btn">
+                <img src="../../assets/images/previous.svg" alt="">
+
+            </a>
+            <!-- <ion-input type="text" (ionChange)="onTypeSearchTerm($event)" [(ngModel)]="searchTerm" (click)=searchresult(); placeholder="what you're looking for?" class="category-serach-input"></ion-input> -->
+        </div>
+
+
+
+        <!-- category list -->
+        <div class="category-list">
+            <h3>Search results</h3>
+            <div class="category-list" *ngIf="isCategoryOrSubCategory">
+                <ul class="category-item">
+                    <li class="active" (click)="onClickCategoryOrService()">
+                        <a>
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="40" height="39.999" viewBox="0 0 40 39.999">
+                  <path id="key2" d="M39.147,12.275,35.2,8.326,31.674,4.8,27.724.855a3.175,3.175,0,0,0-3.834-.38l-10.8,7.2a2.9,2.9,0,0,0-.959,3.609l2.754,5.506c.084.169.181.347.289.534L1.248,31.25,0,40H7.5V37.5h5v-5h5v-5h5V24.719c.25.149.49.283.711.392l5.506,2.754a2.9,2.9,0,0,0,3.609-.959l7.2-10.8a3.172,3.172,0,0,0-.38-3.833ZM5.884,33.384,4.117,31.616,16.288,19.445l1.768,1.768Zm29.938-16.83-1.768,1.768a1.253,1.253,0,0,1-1.768,0L21.681,7.715a1.253,1.253,0,0,1,0-1.768L23.448,4.18a1.253,1.253,0,0,1,1.768,0L35.822,14.786a1.253,1.253,0,0,1,0,1.768Z" transform="translate(0.002 -0.001)" fill="#8c3bfa"/>
+                </svg> -->
+
+                            <img *ngIf="showIcon != null" [src]="baseImageUrl+showIcon" class="category_image" alt="icon">
+                            <img *ngIf="showIcon == null" [src]="defaultImage" class="category_image" alt="icon">
+                        </a>
+                        <p>{{searchData?.name | titlecase}}</p>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+
+
+        <!-- category list -->
+        <ul class="popular-list" *ngIf="!isCategoryOrSubCategory">
+            <li (click)="onClickServiceSearchResult()">
+                <a>
+                    <div class="popular-img">
+                        <img *ngIf="showIcon" [src]="baseImageUrl+showIcon" alt=""></div>
+                    <div class="popular-content">
+                        <h4>{{searchData?.name | titlecase}}</h4>
+                        <div class="time-col">
+                            <span><img src="../../assets/images/clock.svg" alt=""></span>
+                            <p>Estimated time: 15-20 minutes
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <div class="price">$290</div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- bottom tab -->
+    <app-bottom-tab></app-bottom-tab>
+    <!-- search result -->
+    <!-- <div class="serach-result" *ngIf="searchlist">
+        <a>Locksmith</a>
+        <a>Plumber</a>
+        <a>Electrician</a>
+        <a>Mover</a>
+    </div> -->
+    <!-- search result -->
+    <div class="serach-result" *ngIf="searchlist">
+        <a *ngFor="let result of searchResultList" (click)="onClickSearchResult(result)">{{result.name}}</a>
+    </div>
+    <!-- search result end -->
+</ion-content>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="M-280 -445L360 -445L360 691L-280 691Z" />
+		</clipPath>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: none;stroke: #3aee88;stroke-width: 4 } 
+		.shp1 { fill: #3aee88 } 
+	</style>
+	<g id="Dashboard – vendor completed" clip-path="url(#cp1)">
+		<g id="Group 130">
+			<g id="Group 123">
+				<path id="Ellipse 32" class="shp0" d="M40 80C17.88 80 0 62.12 0 40C0 17.88 17.88 0 40 0C62.12 0 80 17.88 80 40C80 62.12 62.12 80 40 80Z" />
+				<path id="ic_check_24px" class="shp1" d="M33.42 47.63L24.9 39.1L22 41.98L33.42 53.41L57.95 28.88L55.07 26L33.42 47.63Z" />
+			</g>
+		</g>
+	</g>
+</svg>

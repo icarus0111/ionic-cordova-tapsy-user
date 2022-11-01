@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">localhost</domain>
+        <domain includeSubdomains="true">www.omdbapi.com</domain>
+        <domain includeSubdomains="true">www.cloudinary.com</domain>
+        <domain includeSubdomains="true">52.64.252.144:3000</domain>
+        <domain includeSubdomains="true">www.remotesandkeys.com.au</domain>
+        <domain includeSubdomains="true">www.remotesandkeys.com</domain>
+        <domain includeSubdomains="true">tapsy.com.au</domain>
+        <domain includeSubdomains="true">node.tapsy.com.au</domain>
+    </domain-config>
+</network-security-config>

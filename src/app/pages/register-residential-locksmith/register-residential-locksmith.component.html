@@ -1,0 +1,94 @@
+<app-loader class="loader1" *ngIf="showLoader"></app-loader>
+
+<ion-content fullscreen>
+    <div class="register-col">
+        <div class="register-top">
+            <div class="register-left">
+                <a class="previous-icon" (click)="goBack()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13.41" height="21.717" viewBox="0 0 13.41 21.717">
+                          <path id="ic_navigate_before_24px" d="M21.41,8.552,18.858,6,8,16.858,18.858,27.717l2.552-2.552-8.289-8.307Z" transform="translate(-8.59 -5.75)" fill="#222"/>
+                        </svg>
+                    <h2 *ngIf="title">{{title | titlecase}}</h2>
+                </a>
+                <span class="service-select-img"><img [src]="baseImageUrl+serviceImage" alt=""></span>
+            </div>
+            <!-- <div class="register-product-col">
+                <div class="product-img">
+                    
+                </div>
+                <h3>{{title | titlecase}}</h3>
+            </div> -->
+            <!-- <div class="register-right">
+                <img src="../../assets/images/register-top-img.jpg" alt="">
+            </div> -->
+        </div>
+        <div class="register-form">
+            <form [formGroup]="registerForm">
+                <div class="register-box">
+                    <div class="form-group">
+                        <label>Type of house ?</label>
+                        <div class="select">
+                            <ion-select interface="popover" formControlName='house_type' name="house_type" placeholder="Choose house type">
+                                <ion-select-option value="house">House</ion-select-option>
+                                <ion-select-option value="town house">Town House</ion-select-option>
+                                <ion-select-option value="apartment">Apartment</ion-select-option>
+                            </ion-select>
+                        </div>
+                    </div>
+
+                    <!-- <div class="form-group">
+                    <label>What's your car model?</label>
+                    <ion-item>
+                        <ion-label class="select-title">Choose model</ion-label>
+                        <ion-select interface="popover" formControlName='car_model' name="car_model">
+                            <ion-select-option value="nes">BMW</ion-select-option>
+                            <ion-select-option value="n">Mercedez </ion-select-option>
+                            <ion-select-option value="ps">Suzuki </ion-select-option>
+                            <ion-select-option value="genesis">Audi </ion-select-option>
+                            <ion-select-option value="saturn">Jeep </ion-select-option>
+                            <ion-select-option value="snes">Peugeot </ion-select-option>
+                        </ion-select>
+                    </ion-item>
+                </div> -->
+
+                    <!-- <div class="form-group">
+                    <label>What's your car manufacturing year?</label>
+                    <ion-item>
+                        <ion-label class="select-title">2009-2012</ion-label>
+                        <ion-select interface="popover" formControlName='car_manufacturing_year' name="car_manufacturing_year">
+                            <ion-select-option value="nes">2002</ion-select-option>
+                            <ion-select-option value="n6">2000 </ion-select-option>
+                            <ion-select-option value="ps">1998 </ion-select-option>
+                            <ion-select-option value="genesis">1996 </ion-select-option>
+                            <ion-select-option value="saturn">1994 </ion-select-option>
+                            <ion-select-option value="snes">1990 </ion-select-option>
+                        </ion-select>
+                    </ion-item>
+                </div>-->
+
+                    <div class="form-group">
+                        <label>Number of Locks?</label>
+                        <input type="number" class="input" placeholder="Enter no. of Locks" formControlName='number_of_lock' name="number_of_lock" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Upload a photo of your Locks</label>
+                        <div class="file">
+                            <span *ngIf="!imageURI">Browse your gallery or take a new photo</span>
+                            <span *ngIf="imageURI">One Picture Selected</span>
+                            <input class="image-upload" name="uploaded_image" (click)="getImage()">
+                            <!-- <img *ngIf="img1" [src]="img1" /> -->
+                        </div>
+                    </div>
+
+
+                </div>
+            </form>
+            <div class="form-group">
+                <button type="submit" class="processed-btn" (click)="onSubmitRegisterForm()"> PROCEED NEXT 
+                <i class="fa fa-angle-right"></i>
+          </button>
+            </div>
+        </div>
+    </div>
+</ion-content>

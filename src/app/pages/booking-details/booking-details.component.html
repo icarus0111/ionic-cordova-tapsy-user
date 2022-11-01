@@ -1,0 +1,50 @@
+<app-loader class="loader1" *ngIf="showLoader"></app-loader>
+
+<ion-content fullscreen>
+    <div class="register-col">
+        <div class="register-top">
+            <div class="register-left">
+                <a class="previous-icon" (click)="goBack()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13.41" height="21.717" viewBox="0 0 13.41 21.717">
+                      <path id="ic_navigate_before_24px" d="M21.41,8.552,18.858,6,8,16.858,18.858,27.717l2.552-2.552-8.289-8.307Z" transform="translate(-8.59 -5.75)" fill="#222"/>
+                    </svg>
+                    <h2>Booking Details</h2>
+                </a>
+            </div>
+
+            <!-- <div class="register-right">
+                <img src="../../assets/images/register-top-img.jpg" alt="">
+            </div> -->
+        </div>
+        <div class="account-info">
+            <ul class="account-list">
+                <li>Service: <span>{{booking_details?.service_details.name | titlecase}}</span></li>
+                <li *ngIf="booking_details?.address != null">Location: <span>{{booking_details?.address}}</span></li>
+
+                <li *ngIf="details?.car_brand">Brand: <span>{{details?.car_brand}}</span></li>
+                <li *ngIf="details?.car_model">Model: <span>{{details?.car_model}}</span></li>
+                <li *ngIf="details?.car_manufacturing_year">Manufacturing Year:
+                    <span *ngIf="details?.car_manufacturing_year">{{details?.car_manufacturing_year}} {{details?.car_manufacturing_year?.manufacturing_year_end}}</span>
+                    <!-- <span *ngIf="details?.car_manufacturing_year.manufacturing_year_end.length == 0">{{details?.car_manufacturing_year.manufacturing_year_start}}</span> -->
+                </li>
+                <li *ngIf="details?.registration_number">Rego No.: <span>{{details?.registration_number}}</span></li>
+
+                <li *ngIf="details?.house_type">House Type: <span>{{details?.house_type}}</span></li>
+                <li *ngIf="details?.number_of_lock">Number of Lock: <span>{{details?.number_of_lock}}</span></li>
+
+                <li>Date & Time: <span>{{booking_details?.date}}, {{booking_details?.time}}</span></li>
+                <li>Note: <span>{{booking_details?.job_note}}</span></li>
+                <li>Price: <span>${{booking_details?.price}}</span></li>
+
+                <li>Payment Method: <span>Credit/Debit Card</span></li>
+                <!-- <li>Attachment: <span><a href=""> View Attachment</a></span></li>
+            <li>Locksmith Name: <span>Danny Miller</span></li> -->
+            </ul>
+        </div>
+
+        <div *ngIf="showReviewSection">
+            <!-- <button type="button" class="proceed-btn">Give Review <i class="fa fa-angle-right"></i></button> -->
+            <a class="btn1" (click)="onClickGiveReview()">Give Review <i class="fa fa-angle-right"></i></a>
+        </div>
+    </div>
+</ion-content>

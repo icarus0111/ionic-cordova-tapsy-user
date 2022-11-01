@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "768776086017",
+    "firebase_url": "https://tapsy-156800.firebaseio.com",
+    "project_id": "tapsy-156800",
+    "storage_bucket": "tapsy-156800.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768776086017:android:7c7149ebc189693e919600",
+        "android_client_info": {
+          "package_name": "com.tapsyservice.tapsy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "768776086017-kan0e6hd25hphvvvt423hgp60180dcbl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuJyC4miJoiUNT7l3BI-O-T0evVjpWXAM"
+        },
+        {
+          "current_key": "AIzaSyDuIxHfc9z_6rzeABgC8aZSJIuCgTCz4k8"
+        },
+        {
+          "current_key": "AIzaSyAvi8izJBiY5SXocu2gM-UH0cVr6LDpGks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "768776086017-kan0e6hd25hphvvvt423hgp60180dcbl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

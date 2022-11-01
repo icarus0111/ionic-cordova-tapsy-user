@@ -1,0 +1,45 @@
+<app-loader class="loader1" *ngIf="showLoader"></app-loader>
+
+
+<ion-content>
+    <div class="login-col">
+        <div class="login-top">
+            <a routerLink="/home" class="back-btn"><i class="fa fa-angle-left"></i></a>
+            <div class="login-logo"><img src="../../assets/images/logo1.svg" alt=""></div>
+        </div>
+        <div class="login-bottom">
+
+            <!-- <h2>What's your mobile number?</h2>
+            <p>We'll text a code to verify your phone</p> -->
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmitRegisterForm()">
+                <div class="input-col">
+                    <h2>First Name</h2>
+                    <input type="text" name="first_name" formControlName='first_name' placeholder="" class="input">
+                </div>
+                <div class="input-col">
+                    <h2>Last Name</h2>
+                    <input type="text" name="last_name" formControlName='last_name' placeholder="" class="input">
+                </div>
+                <div class="input-col">
+                    <h2>Phone</h2>
+                    <input type="tel" name="phone" formControlName='phone' placeholder="" class="input">
+                </div>
+                <div class="input-col">
+                    <h2>Email</h2>
+                    <input type="email" name="email" formControlName='email' placeholder="" class="input">
+                </div>
+                <!-- <div class="input-col">
+                    <span>+61</span>
+                    <input type="tel" name="phone" formControlName='phone' placeholder="" class="input">
+                </div> -->
+                <div class="submit-col">
+                    <p>Already Registered ? Please <span class="login-link" [routerLink]="['/login']">Login</span></p>
+                </div>
+                <div class="submit-col">
+                    <p>By continuing, charges for data and messages may apply</p>
+                    <button type="submit" class="next-btn"><i class="fa fa-angle-right"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</ion-content>

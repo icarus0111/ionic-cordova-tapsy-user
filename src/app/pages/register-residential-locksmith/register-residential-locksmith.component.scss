@@ -1,0 +1,268 @@
+.register-col {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    height: 100vh;
+}
+
+.register-top {
+    width: 100%;
+    padding: 0 0 0 25px;
+    height: auto !important;
+    background: #fff;   
+}
+.register-product-col{ width: 100%; height: 60px; vertical-align:middle; float: left; position: relative; background: #fff; z-index: 9999999999;}
+.product-img{ width: 60px; height: 60px; border-radius: 50%; background: #ccc; float: left; margin-right: 15px; overflow: hidden;}
+.register-top h3{ font-size: 24px; font-weight: 700; color: #222; line-height: 60px;}
+.form-group {
+    margin-bottom: 10px;
+}
+.register-left {
+    width: 100%;
+    float: left;
+    position: relative;
+    margin-top: 10%;
+    margin-bottom: 20px;
+}
+
+.register-right {
+    width: 40%;
+    float: right;
+}
+
+.previous-icon svg {
+    float: left;
+    margin-right: 20px;
+    width: 10px;
+    margin-top: 0px;
+}
+
+.register-left h2 {
+    font-size: 18px;
+    color: #222;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.register-form {
+    width: 100%;
+    padding: 25px;
+    float: left;
+}
+.register-box{ 
+    // height: 61vh;
+     background: #fff; 
+     position: relative; 
+     z-index: 9999;
+
+    }
+// .register-btn-col{ height: 10vh;}
+.item-select {
+    border-radius: 5px;
+    border: 2px #ccc solid !important;
+    box-shadow: none !important;
+    height: 45px;
+}
+
+.select-text {
+    margin-top: -4px !important;
+}
+
+.input {
+    width: 100%;
+    height: 45px;
+    border: 2px #ccc solid;
+    border-radius: 5px;
+    padding: 0 15px;
+}
+
+.input:focus {
+    border-color: #8c3bfa;
+    outline: none;
+}
+
+.image-upload {
+    background: transparent;
+    border: none;
+}
+
+.image-upload {
+    position: absolute;
+    font-size: 25px;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+
+.file {
+    width: 100%;
+    position: relative;
+    border: 2px #ccc solid;
+    height: 45px;
+    border-radius: 5px;
+    background: url(../../../assets/images/camera.png) no-repeat right center;
+}
+
+.file:focus {
+    border-color: #8c3bfa;
+    outline: none;
+}
+
+.form-group label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #222222;
+}
+
+.select-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: #c5c5c5;
+    height: 23px;
+}
+
+ :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #c5c5c5;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+ ::placeholder {
+    color: #c5c5c5;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.file span {
+    color: #c5c5c5;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    line-height:45px;
+    padding-left: 15px;
+}
+.service-select-img{ width:40px; height: 40px; border-radius:50%; background: #ccc; overflow: hidden; position: absolute; right: 25px; top: -10px;}
+.processed-btn {
+    -webkit-box-shadow: 0px 20px 27px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 20px 27px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 20px 27px 0px rgba(0, 0, 0, 0.25);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 45px;
+    background: #8c3bfa;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border-radius: 50px;
+    margin: 25px auto 0;
+    display: block;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 12px;
+    line-height: 45px;
+    text-align: center;
+}
+
+.processed-btn .fa {
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.select-icon {
+    margin-top: 5px !important;
+    padding-top: 5px !important;
+}
+.select {
+    width: 100%;
+    height: 45px;
+    outline-style: none;
+    border: 2px solid #ced4da !important;
+    border-radius: 5px;
+    padding: 0;
+    outline: none;
+    color: #222;
+    padding-right: 15px;
+    font-size: 14px;
+    padding-top: 2px;
+}
+.select-icon{ margin-top: 3px !important;}
+select option {
+    color: black;
+    background: #fff;
+}
+
+select option:first-child {
+    color: #c6c6c6;
+}
+
+.select:focus {
+    border: 2px #8c3bfa solid !important;
+}
+.register-btn-col{ width: 100%;}
+@media  (max-height:823px ) {
+    .register-box{
+        margin-bottom: 42%;
+    }
+}
+@media  (max-height:731px ) {
+    .register-box{ margin-bottom: 20%;}
+}
+@media (min-width:361px ) and (max-width:411px ) {
+    .form-group{
+        margin-bottom: 15px;
+    }
+    .input{
+        height: 45px;
+        line-height: 45px; 
+    }
+    
+}
+@media (min-width:320px ) and (max-width:375px ) {
+    .form-group{
+        margin-bottom: 10px;
+    }
+}
+@media (min-width:320px ) and (max-width:360px ) {
+    .register-top{ height: 20vh;}
+    // .register-btn-col{ height: 12vh;}
+    // .register-box{ height: 61vh;}
+    ion-select{ padding: 10px 0 6px 15px;}
+    .select{ height: 45px;}
+    .select-icon-inner{ top:15px !important; margin-top: 0px !important;}
+    .input{ height: 45px; line-height: 45px !important;}
+    .file{ height: 45px;}
+    .file span{ line-height: 37px; font-size: 12px !important;}
+    .register-top h3{ font-size: 20px !important;}
+    .product-img{    
+        width: 55px;
+        height: 55px;
+    }
+    .register-left{
+        margin-top: 25px !important;
+        margin-bottom: 15px !important;
+    }
+    .processed-btn{margin: 20px auto 0 !important;}
+    .bottom-col{
+        margin-top: 15px !important;
+        margin-bottom:20px !important;
+    }
+    .register-btn-col{ position: relative; bottom: 0;}
+}
+@supports (-webkit-overflow-scrolling: touch) {
+    .select{ height: 50px;}
+    .input{ height: 50px;}
+    .file{ height: 50px;}
+    .processed-btn{ height:50px;}
+    
+}

@@ -1,0 +1,171 @@
+.previous-icon svg {
+    float: left;
+    margin-right: 25px;
+    width: 10px;
+    margin-top: -1px;
+}
+
+.sub-category-top {
+    padding: 52px 25px 0;
+}
+
+.sub-category-top {
+    background: #fff;
+}
+
+.previous-icon h2 {
+    color: #222;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+#expand-search {
+    position: absolute;
+    right: 25px;
+    top: 38px;
+}
+
+ul.top-tab-list li {
+    text-align: center;
+    border-bottom: 3px rgba(0, 0, 0, 0.1) solid;
+    padding: 0;
+}
+
+ul.top-tab-list li.active a {
+    display: block;
+    color: #462445;
+}
+
+ul.top-tab-list li a:hover {
+    padding-bottom: 15px;
+    /* width: 100%; */
+    display: block;
+    color: #462445;
+}
+
+ul.top-tab-list li a {
+    padding-bottom: 15px;
+}
+
+ul.top-tab-list {
+    padding: 0px;
+}
+
+.tab-content {
+    width: 100%;
+    padding: 25px;
+    height: 70vh;
+    overflow-y: scroll;
+}
+
+ul.tab-content-list {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+ul.tab-content-list li {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+ul.tab-content-list li .sub-category-icon {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 58px;
+    border-radius: 50%;
+    border: 1px #ebebeb solid;
+    float: left;
+    margin-right: 20px;
+}
+
+ul.tab-content-list li .sub-category-icon svg {
+    width: 25px;
+}
+
+ul.tab-content-list li .sub-category-icon:hover svg path {
+    fill: #fff;
+}
+
+ul.tab-content-list li .sub-category-icon:hover {
+    background: #8c3bfa;
+    border-color: #8c3bfa;
+}
+
+.sub-category-content {
+    float: left;
+}
+
+.sub-category-content h3 {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #222222;
+    margin: 10px 0 5px;
+}
+
+.sub-category-content p {
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #b3b4b5;
+}
+
+.round-image {
+    border-radius: 50%;
+}
+
+.booking-list-left img {
+    float: left;
+    margin-right: 7px;
+    width: 10px;
+    margin-top: 5px;
+}
+
+.tab-content ul.booking-list {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.tab-content ul.booking-list li {
+    width: 100%;
+    float: left;
+    border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+    padding: 10px 0;
+}
+
+.tab-content ul.booking-list li .booking-list-left p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #9f9e9f;
+    float: left;
+}
+
+.tab-content ul.booking-list li .booking-list-left .fa {
+    float: right;
+    line-height: 26px;
+}
+
+.tab-content ul.booking-list li .booking-list-left h5 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #858585;
+    width: 100%;
+    float: left;
+}
+
+.date {
+    font-size: 15px;
+    color: #333333;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.tab-content {
+    padding: 15px 25px;
+}

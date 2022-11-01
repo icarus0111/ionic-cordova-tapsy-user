@@ -1,0 +1,7 @@
+{
+  "name": "TapsyApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

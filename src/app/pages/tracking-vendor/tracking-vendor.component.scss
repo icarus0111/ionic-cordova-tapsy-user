@@ -1,0 +1,158 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.track-bottom{ position: absolute; bottom: 25px;}
+.track-top{ position: absolute; top: 25px;}
+.tracking-col{ width: 90%; position: absolute; left: 5%; right: 5%; z-index: 9999999; bottom:0; top:0; height: 100vh;} 
+.tracking-info{ width: 100%; background: #fff; padding:20px;  -webkit-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.35);
+    -moz-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.35); box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.35); border-radius: 10px; float: left; margin-bottom: 15px;}
+.track-col{ width: 100%; float:left;}
+.map-icon{ width: 14px; float: left; margin-right: 5px;}
+.map-icon svg{ width: 14px; fill: #dfdfdf; float: left; margin-top: 2px;}
+.track-content{ float: left; width:92%;}
+.track-content p{font-size: 12px; color: #8f8d8d; margin-bottom: 10px;}
+.track-content h6{ font-size: 16px; color: #222222; font-weight: 700; margin: 0;} 
+.track-content h6 span{ font-size: 11px; text-align: right; color: #f35b5b; float: right;}
+.tracking-info h5{ font-size: 12px; margin: 0px; color: #222222; margin-bottom:10px;}
+.tracking-info h5 span{ color: #5eae22;}
+.user-track{ width: 50px; height: 50px; background: #ccc; border-radius: 50%; float: left; margin-right: 15px;} 
+.tracking-info h4{ font-size: 16px; font-weight: 700; color: #222222; margin-bottom:5px; margin-top: 18px;}  
+.tracking-info p{ font-size: 12px; color: #8f8d8d; margin: 0;}
+.call{ position: absolute; right: 20px; top: 50px; width:40px; height:40px; background: #8c3bfa; border-radius: 50%; text-align: center; line-height:40px;}
+.call svg{ fill: #fff; width: 12px; height: 15px;}
+.location-col {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.google-map {
+    width: 100%;
+    height: 100vh;
+    background: #ccc;
+}
+
+.location-info {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    right: 0px;
+    height: 30vh;
+    background: #fff;
+    z-index: 9999;
+    padding: 25px 25px 0;
+}
+
+.location-row {
+    width: 82%;
+    float: left;
+    position: relative;
+}
+
+.location-input {
+    width: 100%;
+    background: #fff;
+    border-radius: 50px;
+    border: 2px #ccc solid;
+    height: 45px;
+    padding: 0 40px 0 20px;
+}
+
+.location-input:focus {
+    border-color: #8c3bfa;
+    outline: none;
+}
+
+.location-icon {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    width: 20px;
+}
+
+.location-icon img {
+    width: 18px;
+}
+
+.google-map {
+    width: 100%;
+}
+
+.google-map img {
+    width: 100%;
+}
+
+.location-info h2 {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #222222;
+}
+
+.location-info p {
+    font-size: 12px;
+    color: #858585;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.rating{ margin-left: 10px;}
+.rating img{ width: 10px; margin-left: 2px;}
+.location-search-btn {
+    width: 45px;
+    height: 45px;
+    background: #8c3bfa;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 38px;
+    color: #fff;
+    float: right;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.location-search-btn:hover {
+    -webkit-box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.47);
+    -moz-box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.47);
+    box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.47);
+    background: #7b2ce6;
+}
+
+.location-search-btn:focus {
+    outline: none;
+    background: #7b2ce6;
+}
+
+ :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #858585;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+ ::placeholder {
+    color: #858585;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Optional: Makes the sample page fill the window. */

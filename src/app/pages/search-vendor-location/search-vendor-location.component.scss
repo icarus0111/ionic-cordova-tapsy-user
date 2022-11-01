@@ -1,0 +1,175 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.location-col {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.circle-animation{ width: 100%; position: absolute; top: 40%; bottom: 0px; left:40%; z-index: 9999; padding: 20px;}
+.google-map {
+    width: 100%;
+    height: 100vh;
+    background: #ccc;
+    position: relative;
+}
+
+.location-info {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    right: 0px;
+    height: 30vh;
+    background: #fff;
+    z-index: 9999;
+    padding: 25px 25px 0;
+}
+
+.location-row {
+    width: 82%;
+    float: left;
+    position: relative;
+}
+
+.location-input {
+    width: 100%;
+    background: #fff;
+    border-radius: 50px;
+    border: 2px #ccc solid;
+    height: 45px;
+    padding: 0 40px 0 20px;
+}
+
+.location-input:focus {
+    border-color: #8c3bfa;
+    outline: none;
+}
+
+.location-icon {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    width: 20px;
+}
+
+.location-icon img {
+    width: 18px;
+}
+
+.google-map {
+    width: 100%;
+}
+
+.google-map img {
+    width: 100%;
+}
+
+.location-info h2 {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #222222;
+}
+
+.location-info p {
+    font-size: 12px;
+    color: #858585;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.location-search-btn {
+    width: 45px;
+    height: 45px;
+    background: #8c3bfa;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 38px;
+    color: #fff;
+    float: right;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.location-search-btn:hover {
+    -webkit-box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.47);
+    -moz-box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.47);
+    box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.47);
+    background: #7b2ce6;
+}
+
+.location-search-btn:focus {
+    outline: none;
+    background: #7b2ce6;
+}
+
+ :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #858585;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+ ::placeholder {
+    color: #858585;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+.circle-ripple {
+    background-color:rgba(140,59,250,0.5);
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    -webkit-animation: ripple 1.1s linear infinite;
+            animation: ripple 1.1s linear infinite;
+  }
+  
+  @-webkit-keyframes ripple {
+    0% {
+      box-shadow: 0 0 0 0 rgba(140, 59, 250, 0.3), 0 0 0 1em rgba(140, 59, 250, 0.3), 0 0 0 3em rgba(140, 59, 250, 0.3), 0 0 0 5em rgba(140, 59, 250, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 0 1em rgba(140, 59, 250, 0.3), 0 0 0 3em rgba(140, 59, 250, 0.3), 0 0 0 5em rgba(140, 59, 250, 0.3), 0 0 0 8em rgba(140, 59, 250, 0);
+    }
+  }
+  
+  @keyframes ripple {
+    0% {
+      box-shadow: 0 0 0 0 rgba(140, 59, 250, 0.3), 0 0 0 1em rgba(140, 59, 250, 0.3), 0 0 0 3em rgba(140, 59, 250, 0.3), 0 0 0 5em rgba(140, 59, 250, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 0 1em rgba(140, 59, 250, 0.3), 0 0 0 3em rgba(140, 59, 250, 0.3), 0 0 0 5em rgba(140, 59, 250, 0.3), 0 0 0 8em rgba(140, 59, 250, 0);
+    }
+  }
+.search-lokosmith{ width: 90%; position: absolute; left: 5%; right: 5%; bottom: 30px; z-index: 99999999;}
+.serach-vender{ width: 100%; background: #fff; padding:20px;  -webkit-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.35);
+    -moz-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.35); box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.35); border-radius: 10px; float: left;}
+    .vendor-content h3{ font-size: 16px; color: #222222; font-weight: 700;}
+.vendor-content p{ font-size: 12px; color: #8f8d8d; margin-bottom: 0px;}
+.vendor-content p span{ color: #222222;}    
+.vendor-img{ width: 40px; height: 40px; background: #ccc; border-radius: 50%; float: right;}
+.vendor-content{ float: left;}
+.close1{ width: 40px; height: 40px; background: #5a5a5a; -webkit-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.35);
+    -moz-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.35); box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.35); border-radius: 50%; position: absolute; top:45px; right:45px; z-index: 999999999; text-align: center; line-height:37px;}
+.close1 svg{ width: 10px; fill: #fff; height: 16px;} 
+.close1:hover{background-color:rgba(140,59,250,1);}   
+/* Optional: Makes the sample page fill the window. */

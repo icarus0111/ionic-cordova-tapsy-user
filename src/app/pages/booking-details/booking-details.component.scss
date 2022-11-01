@@ -1,0 +1,103 @@
+.register-col {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    height: 100vh;
+}
+
+.register-top {
+    width: 100%;
+    padding: 25px 0 15px 25px;
+    background: #fff;
+}
+
+.previous-icon svg {
+    float: left;
+    margin-right: 20px;
+    width: 10px;
+    margin-top: 0px;
+}
+
+.register-left h2 {
+    font-size: 18px;
+    color: #222;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.account-info {
+    width: 100%;
+    margin-top: 0px;
+    float: left;
+}
+
+.account-info ul.account-list {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    float: left;
+}
+
+.account-info ul.account-list li:nth-child(odd) {
+    background: #f9f8f9;
+    border-top: 1px #f0f0f0 solid;
+    border-bottom: 1px #f0f0f0 solid;
+}
+
+.account-info ul.account-list li:nth-child(even) {
+    background: #fff;
+}
+
+.sub-category-top a {
+    float: left;
+    width: 70%;
+}
+
+.account-info ul.account-list li {
+    width: 100%;
+    margin-bottom: 0;
+    padding: 10px 25px;
+    font-size: 14px;
+    color: #646166;
+    font-size: 14px;
+    float: left;
+}
+
+.account-info ul.account-list li span {
+    width: 62%;
+    float: right;
+    text-align: right;
+}
+
+.account-info ul.account-list li a {
+    color: #8c3bfa;
+}
+
+.btn1 {
+    width: 100%;
+    height: 45px;
+    background: #8c3bfa;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #fff !important;
+    line-height: 45px;
+    border-radius: 50px;
+    display: block;
+}
+
+.btn1 .fa {
+    margin-left: 10px;
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+    .btn1 {
+        line-height: 50px;
+        height: 50px;
+    }
+    // .btn2{ line-height:50px; height: 50px;}
+}

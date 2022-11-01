@@ -1,0 +1,31 @@
+<app-loader class="loader1" *ngIf="showLoader"></app-loader>
+
+<ion-content>
+    <div class="login-col">
+        <div class="login-top">
+            <a routerLink="/login" class="back-btn"><i class="fa fa-angle-left"></i></a>
+            <div class="login-logo"><img src="../../assets/images/logo1.svg" alt=""></div>
+        </div>
+        <div class="login-bottom">
+            <h2>Enter the 6 Digit Code</h2>
+            <!-- <p>Send to <span>+61{{loginData?.data?.phone}}</span></p> -->
+            <p>Send to <span>{{loginData?.data?.email}}</span></p>
+
+            <div class="input-col">
+                <input #otpinput type="tel" [(ngModel)]="otp1" class="otp" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="onTypeOtp()">
+                <input #otpinput type="tel" [(ngModel)]="otp2" class="otp" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="onTypeOtp()">
+                <input #otpinput type="tel" [(ngModel)]="otp3" class="otp" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="onTypeOtp()">
+                <input #otpinput type="tel" [(ngModel)]="otp4" class="otp" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="onTypeOtp()">
+                <input #otpinput type="tel" [(ngModel)]="otp5" class="otp" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="onTypeOtp()">
+                <input #otpinput type="tel" [(ngModel)]="otp6" class="otp" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="onTypeOtp()">
+            </div>
+            <div class="submit-col">
+                <!-- <p>Resend code in 00:58</p> -->
+                <button type="button" (click)="onSubmitOtp()" class="next-btn">
+                    <i class="fa fa-angle-right"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</ion-content>

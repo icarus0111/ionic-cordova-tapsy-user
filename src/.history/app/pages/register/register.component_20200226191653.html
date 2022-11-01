@@ -1,0 +1,81 @@
+<app-loader class="loader1" *ngIf="showLoader"></app-loader>
+
+<ion-content fullscreen>
+    <div class="register-col">
+        <div class="register-top">
+            <div class="register-left">
+                <a class="previous-icon" (click)="goBack()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13.41" height="21.717" viewBox="0 0 13.41 21.717">
+                      <path id="ic_navigate_before_24px" d="M21.41,8.552,18.858,6,8,16.858,18.858,27.717l2.552-2.552-8.289-8.307Z" transform="translate(-8.59 -5.75)" fill="#222"/>
+                    </svg>
+                    <h2 *ngIf="title">{{title | titlecase}}</h2>
+                </a>
+                <span class="service-select-img"><img [src]="baseImageUrl+image" alt=""></span>
+            </div>
+            <!-- <div class="register-product-col">
+                <div class="product-img"></div>
+                <h3>{{title | titlecase}}</h3>
+            </div> -->
+            <!-- <div class="register-right">
+                <img src="../../assets/images/register-top-img.jpg" alt="">
+            </div> -->
+        </div>
+        <div class="register-form">
+            <form [formGroup]="registerForm">
+                <div class="register-box">
+                    <div class="form-group">
+                        <label>What car brand you own?</label>
+                        <div class="select">
+                            <!-- <ion-label class="select-title"></ion-label> -->
+                            <ion-select interface="popover" formControlName='car_brand' name="car_brand" (ionChange)="onChooseBrand($event)" placeholder="Choose brand">
+                                <ion-select-option [value]="brand.id" *ngFor="let brand of carBrandList">{{brand?.name}}</ion-select-option>
+                            </ion-select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>What's your car model?</label>
+                        <div class="select">
+                            <!-- <ion-label class="select-title"></ion-label> -->
+                            <ion-select interface="popover" formControlName='car_model' name="car_model" (ionChange)="onChooseModel($event)" placeholder="Choose model">
+                                <ion-select-option [value]="model.name" *ngFor="let model of carModelList">{{model?.name}}</ion-select-option>
+                            </ion-select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>What's your car manufacturing year?</label>
+                        <div class="select">
+                            <!-- <ion-label class="select-title"></ion-label> -->
+                            <ion-select interface="popover" formControlName='car_manufacturing_year' name="car_manufacturing_year" placeholder="Choose Manufacturing Year">
+                                <ion-select-option [value]="year.start_year+'-'+year.end_year" *ngFor="let year of carYearList">{{year?.start_year}}-{{year?.end_year}}</ion-select-option>
+                            </ion-select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>What's your registration number?</label>
+                        <input type="text" class="input" placeholder="Enter car registration no." formControlName='registration_number' maxlength="6" name="registration_number">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Upload a photo of your car key/remote</label>
+                        <div class="file">
+                            <!-- <span>Browse your gallery or take a new photo</span> -->
+                            <span *ngIf="!imageURI">Browse your gallery or take a new photo</span>
+                            <span *ngIf="imageURI">One Picture Selected</span>
+                            <input class="image-upload" name="uploaded_image" (click)="getImage()">
+                            <!-- <img *ngIf="img1" [src]="img1" /> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group register-btn-col">
+                    <button type="submit" class="processed-btn" (click)="onSubmitRegisterForm()"> PROCEED NEXT 
+                        <i class="fa fa-angle-right"></i>
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</ion-content>

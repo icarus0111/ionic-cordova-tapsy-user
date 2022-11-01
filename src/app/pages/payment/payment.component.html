@@ -1,0 +1,39 @@
+<app-loader class="loader1" *ngIf="showLoader"></app-loader>
+
+<ion-content fullscreen>
+    <div class="location-col">
+        <div class="google-map">
+            <!-- <img src="../../assets/images/google-map.jpg" alt=""> -->
+            <div #mapElement id="map"></div>
+        </div>
+        <div class="payment-col">
+            <div class="vertical-align-wrap2">
+                <div class="vertical-align vertical-align--middle">
+                    <h3>Thanks for cooperation!</h3>
+                    <p>How would you like to pay us?</p>
+                    <a href="" class="cash-btn">BY CASH</a>
+                    <a href="" class="credit-btn">BY DEBIT/CREDIT CARD</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="location-info">
+          <h2>Where is your car located?</h2>
+          <p>Enter address manually or click location detector icon to use current address.</p>
+          <div class="form-group">
+
+              <div class="location-row">
+                  <input type="text" #autoCompleteInput class="location-input" [(ngModel)]="search_location" placeholder="Search location">
+                  <span class="location-icon" (click)="getCurrentLocation()">
+                    <img src="../../assets/images/location-icon.svg" alt="">
+                </span>
+              </div>
+
+              <button type="button" class="location-search-btn" (click)="goToVendorSearch()">
+                <i class="fa fa-angle-right"></i>
+            </button>
+
+          </div>
+      </div> -->
+    </div>
+</ion-content>
